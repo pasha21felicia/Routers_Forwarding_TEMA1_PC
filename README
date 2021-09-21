@@ -1,0 +1,11 @@
+FORWARDING - Tema1 - PC - Digori Parascovia - 323CC
+
+Parsarea tabelei de rutare:
+Structura tabelei de rutare se afla in fisierul parser.h si este asemanatoarei celei oferite 
+in cadrul laboratorului 4. Structura contine 3 field-uri de _u32 pentru a retine IP-ul prefixului,
+al next-hop-ului si mastii, si un field de int pentru a marca interfata. 
+Am implementat un vectori de structuri pentru a pastra toate datele tabelei de rutare. 
+Aflu cate linii sunt in fisier, aloc vectorul de structuri cu marimea fileSize si apoi tokenizez
+fiecare linie din fisier. Stiind ca fiecare linie contine aceleasi tipuri de date, primii 3 tokeni
+sunt transformati in IP-urile corespunzatoare cu ajutorul functiei inet_pton, iar interfata in int.
+
